@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="divider">1dp</dimen>
+    <dimen name="altura_container">90dp</dimen>
+    <dimen name="largura_container">60dp</dimen>
+</resources>

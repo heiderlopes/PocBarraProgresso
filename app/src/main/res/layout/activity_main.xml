@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:layout_width="@dimen/largura_container"
+        android:layout_height="@dimen/altura_container"
+        android:background="#CCC"
+        android:id="@+id/minhaView2">
+
+        <LinearLayout
+            android:id="@+id/my_view"
+            android:layout_width="@dimen/largura_container"
+            android:layout_height="@dimen/altura_container"
+            android:background="#a6e1aa"
+            android:layout_gravity="bottom"
+            android:orientation="vertical" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="@dimen/largura_container"
+            android:layout_height="@dimen/altura_container">
+
+            <View
+                android:id="@+id/linha4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:background="#FFF"
+                app:layout_constraintBottom_toTopOf="@+id/linha3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/linha3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:background="#FFF"
+                app:layout_constraintBottom_toTopOf="@+id/linha2"
+                app:layout_constraintTop_toBottomOf="@+id/linha4" />
+
+            <View
+                android:id="@+id/linha2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:background="#FFF"
+                app:layout_constraintBottom_toTopOf="@+id/linha1"
+                app:layout_constraintTop_toBottomOf="@+id/linha3" />
+
+            <View
+                android:id="@+id/linha1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider"
+                android:background="#FFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linha2" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/my_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="onSlideViewButtonClick" />
+</LinearLayout>
